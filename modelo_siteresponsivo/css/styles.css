@@ -1,0 +1,100 @@
+* {box-sizing: border-box;}
+/*estilo de body*/
+
+* body{font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+
+.anotacao{  /*distancia da anotação da bordada tela*/
+ background-color: rgb(40, 11, 205);
+color: white;
+padding:10px;
+text-align: center;
+}
+
+.cabecalho{
+    padding: 60px;
+text-align: center;
+background-image:url(../imagens/bannerpc.png) ;
+background-size:cover;
+color: aliceblue;
+}
+
+/*estilo da barra de navegação */
+
+.barra_nav{
+    display: flex;
+    background-color: rgb(40, 11, 205);
+
+}
+
+.barra_nav a{
+    color: white;
+    padding: 14px 10px ;
+    text-decoration: none;
+    text-align: center;
+}
+.barra_nav a:hover {
+    background-color: rgb(211, 208, 208);
+    color: black;
+}
+/*criar 2 colunas desiguais (30% e 70%*/
+
+.coluna{
+
+display: flex;
+flex-wrap: wrap;
+}
+
+.lateral{
+   flex: 30%;
+background-color: #92b7e3;
+padding: 20px;
+}
+
+.principal {
+    flex:70%;
+    background-color: rgb(85, 153, 165);
+    padding: 20px;
+}
+
+.imagem_falsa{
+    background-color: rgb(28, 129, 183);
+    width: 100%;
+    padding: 20px;
+    height: 200px;
+}
+
+.imagem_falsa2{
+    background-color: rgb(25, 129, 177);
+    width: 100%;
+    padding: 20px;
+    height: 200px;
+    margin-bottom: 10px;
+}
+
+.imagem_falsa3{ 
+    background-color: rgb(25, 129, 177);
+    width: 100%;
+    padding: 20px;
+    height: 200px;
+}
+.rodape {
+    max-height: fit-content;
+    padding:20px;
+    text-align: center;
+background-color:  rgb(40, 11, 205);}
+
+    
+@media screen and (max-width:500px){
+    .coluna, .barra_nav{ 
+        flex-direction: column;
+    }
+.cabecalho{
+    background-image: url(../imagens/banercell.png);
+    background-size: cover;
+    color: black;
+}
+}
+
+
