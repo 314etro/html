@@ -1,0 +1,168 @@
+* body{font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+
+.barraemcima    {  /*distancia da anotação da bordada tela*/
+    background-color: rgb(0, 0, 0);
+   color: white;
+   padding:5px;
+   text-align: center;
+   }
+   
+   .imagemfundo{
+       padding: 130px;
+   text-align: center;
+   background-image:url(../imagens/fundo.png) ;
+   background-size:cover;
+   color: rgb(0, 0, 0);}
+.anotacao{  /*distancia da anotação da bordada tela*/
+    background-color: rgb(199, 12, 12);
+    color: white;
+    padding:10px;
+    text-align: center;
+}
+
+.cabecalho{
+    padding: 130px;
+text-align: center;
+background-image:url(../imagens/resenha1.png) ;
+background-size:cover;
+color: aliceblue;
+}
+
+
+/*estilo da barra de navegação */
+.barra_nav{
+    display: flex;
+    background-color: rgb(0, 0, 0);
+}
+.barra_nav a{
+    color: rgb(255, 255, 255);
+    padding: 15px 210px ;
+    text-decoration: none;
+    text-align: center;
+}
+.barra_nav a:hover {
+    background-color: rgb(197, 196, 196);
+   
+    color: black;
+}
+/*criar 2 colunas desiguais (30% e 70%*/
+
+.principal {
+    flex:70%;
+    background-color: #f4ecec;
+    padding: 20px;
+}
+
+.btn{
+    background-image:url(../imagens/pesquisaricone.png);
+    background-position: 30px;
+
+    display: block; /*exibir o conteúdo no formato de um bloco*/
+    width:600px; /*ocupar 100% do espaço disponnível no card*/
+    height: 10px;
+   
+    text-decoration: rgb(69, 67, 66); /*Remove o sublinhado do texto*/
+    background-color: rgb(146, 143, 143);; /*altera a cor de fundo do display block (botão)*/
+    color: rgb(0, 0, 0); /*muda a cor da fonte do texto*/
+    padding: 30px; /*espaçamento de 15px ao redor do display block*/
+    margin-bottom: 15px ; /*adiciona uma margem abaixp do botão de 10px*/
+    border-radius: 40px; /*arredonda os cantos do botão*/
+    display: inline-flex;
+    margin-left: 300px;
+    margin-top:  10px;
+   display:inline-flex;
+    background-repeat: no-repeat;
+    margin-right: 80px;
+   
+}
+.img-1{
+    background-color: #f0ff21;
+    width: 50px;
+    padding: 200px;  
+    height: 240px;
+    justify-content: center;
+    color: rgb(255, 255, 255);  
+    background-image: url(..//imagens/vingadores.jfif);
+    background-size:contain;
+    margin-left: 520px;
+   
+
+}
+
+.texto1{
+    padding: 20px;
+    text-align: center;
+    background-size:cover;
+    color: rgb(0, 0, 0);
+}
+
+.resenha{
+ 
+    padding: 20px;
+    text-align: center;
+    background-size:cover;
+    color: rgb(0, 0, 0);
+   
+}
+
+.img-2{
+    background-color: rgb(183, 198, 205);
+    width: 300px;
+    padding: 100px;
+    height: 100px;
+   
+    background-size: cover;
+    background-image: url(../imagens/vingadores2.jfif);
+    justify-content: center;
+    margin-left: 500px;
+
+}
+
+.comentario{
+    background-color: aliceblue;
+    border: 1px solid black;
+    box-shadow: black 4px 6px 8px;
+    margin: 60px;
+    padding: 0.8rem;
+    width: 1050px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    margin-left: 210px;
+}
+.publi{display:  block;
+    width: 96%;
+    text-align: center;
+    text-transform: uppercase;
+    
+    
+    text-decoration: none; /*remove sublinhado do texto */
+    background-color: rgb(176, 6, 6); /*altera a cor de fundo do display block (botão)*/
+    color: aliceblue ; /*muda a cor da fonte do texto*/
+    padding: 20px;/*espaçamento de 15 px ao redos do display block*/
+    margin-bottom: 10px; /*adiciona uma margem abaixo do botão 10px*/
+    border-radius: 10px; /*arredonda os cantos do botão*/
+    }
+    .publi:hover{/*altera o comportamento do botãoquando passa o mouse em cima*/
+        background-color: rgb(94, 4, 4);/*altera a cor do botão quando passa o mouse em cima*/}
+
+        .rodape{
+            padding: 130px;
+        text-align: center;
+        background-image:url(../imagens/rodapee.png) ;
+        background-size:cover;
+        color: aliceblue;
+        }
+   
+@media screen and (max-width:500px){
+    .coluna, .barra_nav{
+        flex-direction: column;
+    }
+.cabecalho{
+    background-image: url(../imagens/banercell.png);
+    background-size: cover;
+    color: black;
+}
+}
