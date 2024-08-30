@@ -1,0 +1,513 @@
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 15px;
+        }
+
+        header {
+            background-color: #fff;
+            height: 150px;
+            display: flex;
+            flex-direction: column; /* Alinha a logo e a nav na vertical */
+            justify-content: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            flex-wrap: nowrap;
+            margin-bottom: 1px; /* Adiciona espaço entre a logo e a navegação */
+        }
+
+        .logo img {
+            height: 60px;
+            margin-top: 20px;
+            margin-right: 10px; /* add some space between the image and the title */
+
+        }
+
+        .logo h1 {
+            margin: 0; /* remove default margin from h1 */
+            margin-top: 30px;
+        }
+
+        .logo p {
+            font-size: 16px; /* adjust the font size to your liking */
+            color: #333; /* adjust the color to your liking */
+            margin-top: 5px; /* add some space between the title and the subtitle */
+        }
+
+        .subtitle {
+            font-size: 14px; /* Diminui o tamanho da fonte */
+            white-space: nowrap; /* Garante que o texto não quebre em uma nova linha */
+            color: #333; /* Mantém a cor ajustada */
+            margin-top: 5px; /* Espaçamento entre o título e o subtítulo */
+        }
+
+        .logo p.subtitle {
+            margin: 0;
+        }
+
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            margin-left: 700px;
+        }
+
+        nav li {
+            margin-left: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #333;
+        }
+
+
+        .hero {
+            background-image: url('img/i.png');
+            background-size: cover;
+            background-position: center;
+            height: 60vh; /* ajuste a altura do hero para que a imagem de fundo seja exibida corretamente */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-attachment: fixed;
+            text-align: center;
+            color: #fff;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero h1, .hero h2 {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 1s ease-out forwards;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            color: #ffffff;
+        }
+
+        .hero h2 {
+            font-size: 24px;
+            margin-bottom: 40px;
+            color: #ffffff;
+            display: inline-block;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        /* Efeito de Bubbles para a Imagem de Fundo */
+        @keyframes bubbles {
+            0% {
+                background-position: 0% 0%;
+            }
+            100% {
+                background-position: 100% 100%;
+            }
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 20%, transparent 40%);
+            opacity: 0.5;
+            pointer-events: none;
+            animation: bubbles 30s linear infinite;
+        }
+
+
+        .container_empresa {
+            max-width: 800px;
+
+
+        }
+
+        /* Efeito de Ampliação na Imagem */
+.about-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px; /* Adiciona bordas arredondadas */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transição suave para transformação e sombra */
+}
+
+.about-image img:hover {
+    transform: scale(1.05); /* Amplia a imagem em 10% */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Adiciona uma sombra suave ao passar o mouse */
+}
+
+
+        .about {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            padding: 40px 0;
+        }
+
+        .about-content {
+            width: 80%;
+            padding-left: 180px; /* Adiciona espaço entre o texto e a tela no lado esquerdo */
+        }
+
+        .about-image {
+            width: 40%;
+            margin-bottom: 0;
+            display: flex;
+            justify-content: flex-end;
+            margin-right: 180px; /* Adiciona espaço entre a imagem e a borda da direita */
+        }
+
+
+        .about-image img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px; /* Adiciona bordas arredondadas para um visual mais suave */
+        }
+
+        .servicos-slider {
+            display: flex;
+            overflow: hidden;
+            gap: 20px;
+            padding: 20px 0;
+            box-sizing: border-box;
+        }
+
+        .servico {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            text-align: center;
+            transition: transform 0.3s ease; /* Adiciona transição para o efeito hover */
+        }
+
+        .servico:hover {
+            transform: translateY(-5px); /* Move o cartão ligeiramente para cima */
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Aumenta o efeito de sombra */
+        }
+
+        .servico img {
+            border-radius: 8px;
+            margin-bottom: 15px;
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .servicos-slider::-webkit-scrollbar {
+            display: none; /* Esconde a barra de rolagem */
+        }
+
+        .container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+
+        .servicos {
+            padding: 40px 0;
+            background-color: #fff;
+        }
+
+        .servicos h2 {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .servicos-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+
+        .servico h3 {
+            margin-bottom: 10px;
+        }
+
+        .servico p {
+            line-height: 1.6;
+            color: #555;
+        }
+
+        .clientes {
+            padding: 40px 0;
+            background-color: #f9f9f9;
+        }
+
+        .clientes h2 {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .clientes-logos {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .cliente {
+            width: 150px;
+            height: 100px;
+        }
+
+        .cliente img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            border-radius: 5px; /* Adiciona bordas arredondadas para um visual mais suave */
+            transition: transform 0.3s ease; /* Adiciona transição para o efeito hover */
+        }
+
+        .cliente img:hover {
+            transform: scale(1.1); /* Aumenta ligeiramente o tamanho da imagem */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adiciona sombra ao passar o mouse */
+        }
+
+        .contato {
+            padding: 40px 0;
+            background-color: #fff;
+        }
+
+        .contato h2 {
+            text-align: center;
+            margin-bottom: 40px;
+            margin-right: 1000px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            height: 100px;
+        }
+
+        .form-group button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease; /* Adiciona transição para o efeito hover */
+        }
+
+        .form-group button:hover {
+            background-color: #45a049;
+        }
+
+
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .footer-column {
+            width: 30%;
+            margin-bottom: 20px;
+        }
+
+        .footer-column h3 {
+            color: #fff;
+            margin-bottom: 15px;
+        }
+
+        .footer-column ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .footer-column li {
+            margin-bottom: 5px;
+        }
+
+        .footer-column li a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .social-media {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .social-media li a {
+            color: #fff;
+            font-size: 20px;
+            transition: color 0.3s ease; /* Adiciona transição para o efeito hover */
+        }
+
+        .social-media li a:hover {
+            color: #ccc;
+        }
+
+        .fab {
+            font-family: "Font Awesome 5 Brands";
+            font-weight: 400;
+            font-style: normal;
+            font-variant: normal;
+            text-rendering: auto;
+            display: inline-block;
+            line-height: 1;
+        }
+
+        .fas {
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+        }
+
+
+        @media (max-width: 768px) {
+            .about {
+                flex-direction: column;
+            }
+
+            .about-content,
+            .about-image {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+
+            .footer-content {
+                flex-direction: column;
+            }
+
+            .footer-column {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+        }
+
+        .contact-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 20px;
+        }
+        
+        .contact-form {
+            flex: 1;
+            margin-right: 20px;
+        }
+        
+        .contact-map {
+            flex: 1;
+        }
+        
+        .contact-map iframe {
+            width: 100%;
+            height: 250px; /* Ajuste a altura conforme necessário */
+            border: 0;
+        }
+        
+        @media (max-width: 768px) {
+            .contact-content {
+                flex-direction: column;
+            }
+        
+            .contact-form {
+                margin-right: 0;
+                margin-bottom: 20px;
+            }
+        
+            .contact-map iframe {
+                height: 300px; /* Ajuste a altura para telas menores */
+            }
+        }
+        
+        
+        .btn-whatsapp {
+            position: fixed;
+            bottom: 14px;
+            right: 24px;
+            z-index: 99;
+          }
+          .btn-whatsapp img {
+            max-width: 74px;
+            transition: transform 0.4s;
+          }
+          .btn-whatsapp img:hover {
+            transform: scale(1.1);
+          }
+         
+          .btn-whatsapp .tooltip-text {
+            visibility: hidden;
+            position: absolute;
+            width: 120px;
+            top: 8px;
+            left: -144px;
+            padding: 6px;
+            border-radius: 8px;
+            text-align: center;
+            background-color: #232224;
+            color: #FFF;
+            opacity: 0;
+            transition: opacity 0.4s;
+          }
+         
+          .btn-whatsapp:hover .tooltip-text {
+            visibility: visible;
+            opacity: 1;
+          }
